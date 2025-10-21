@@ -427,6 +427,135 @@
         </div>
     </section>
 
+<section class="documentation" id="doc">
+  <div class="container">
+    <h2 class="section-title">RAMR Documentation</h2>
+    <div class="doc-content">
+      <ul>
+        <li><strong>print ""</strong> — prints text to the screen</li>
+        <li><strong>rprint ""</strong> — formatted print, like <code>print(f"")</code></li>
+        <li><strong>imp &lt;module&gt;</strong> — import a module (not working yet)</li>
+        <li><strong>or</strong> — else statement</li>
+        <li><strong>start ""</strong> — start a module or function</li>
+        <li><strong>off ""</strong> — turn off a module</li>
+        <li><strong>wait()</strong> — pause execution</li>
+        <li><strong>query "" ""</strong> — send a query to a module</li>
+        <li><strong>save ""</strong> — save temporary data or user input</li>
+        <li><strong>def</strong> — define a function</li>
+        <li><strong>exit</strong> — exit the program</li>
+        <li><strong>end</strong> — end a block or function</li>
+        <li><strong>break</strong> — exit from loop</li>
+        <li><strong>and</strong> — execute multiple commands at once</li>
+        <li><strong>random.choice</strong> — select a random element</li>
+        <li><strong>random.text</strong> — generate random text</li>
+        <li><strong>random.digits</strong> — generate random digits</li>
+        <li><strong>print.Infinity ""</strong> — infinite print loop (press 'q' to stop)</li>
+        <li><strong>print.&lt;times&gt; ""</strong> — repeat print N times</li>
+        <li><strong>type</strong> — wait for user input (save with <code>save "&lt;name&gt;"</code>)</li>
+        <li><strong>if</strong> — conditional logic</li>
+        <li><strong>@</strong> — comment (like <code>#</code> in Python)</li>
+      </ul>
+      <p>These commands make up the basic RAMR language. Using them together, you can write full programs, handle user input, manage functions, and control program flow.</p>
+    </div>
+  </div>
+</section>
+
+<section class="code-example" id="code">
+  <div class="container">
+    <h2 class="section-title">Example Code</h2>
+    <div class="code-container">
+      <div class="code-header">
+        <span class="code-title">ramr_demo.ramr</span>
+        <div class="code-actions">
+          <span class="code-action"></span>
+          <span class="code-action"></span>
+          <span class="code-action"></span>
+        </div>
+      </div>
+      <pre class="code-content">
+<span class="code-comment">@ Complete RAMR language example</span>
+<span class="code-comment">@ Demonstrating all major features</span>
+
+print "=== RAMR LANGUAGE DEMO ==="
+wait
+
+<span class="code-comment">@ Basic output and variables</span>
+print "Hello! This is RAMR language"
+print.3 "This line repeats 3 times"
+
+<span class="code-comment">@ User input and saving</span>
+type "Enter your name: "
+save username
+type "Enter your age: "
+save age
+
+rprint "Hello {username}, you are {age} years old!"
+
+<span class="code-comment">@ Conditional logic</span>
+if {age} == "18"
+    print "You are exactly 18 years old!"
+or
+    if {age} == "21"
+        print "You are exactly 21 years old!"
+    or
+        print "You are {age} years old"
+    end
+end
+
+<span class="code-comment">@ Random generation</span>
+print ""
+print "Random text:"
+random.text 12
+
+print "Random digits:"
+random.digits 10
+
+print "Random choice:"
+random.choice "apple" "banana" "orange" "grape"
+
+<span class="code-comment">@ Function definition</span>
+def greeting_function
+    print ""
+    print "=== INSIDE FUNCTION ==="
+    type "Enter your country: "
+    save country
+    rprint "Hello {username} from {country}!"
+    print "Function execution completed"
+end
+
+<span class="code-comment">@ Function execution</span>
+print ""
+print "Calling function:"
+start greeting_function
+
+<span class="code-comment">@ Multiple commands with 'and'</span>
+print ""
+print "Multiple commands:"
+and print "Command 1" print "Command 2" print "Command 3"
+
+<span class="code-comment">@ Infinite output (press 'q' to stop)</span>
+print ""
+print "Starting infinite output (press 'q' to stop):"
+print.Infinity "RAMR is awesome! "
+
+<span class="code-comment">@ Final output</span>
+print ""
+print "=== DEMO COMPLETED ==="
+print "Thank you for using RAMR language!"
+print "Variables stored:"
+rprint "Name: {username}"
+rprint "Age: {age}"
+
+<span class="code-comment">@ Exit</span>
+print ""
+type "Press Enter to exit..."
+exit
+      </pre>
+    </div>
+  </div>
+</section>
+
+    
     <!-- Download Section -->
     <section class="hero" id="download">
         <div class="container">
