@@ -370,7 +370,7 @@
                         <li><a href="#features">Features</a></li>
                         <li><a href="#code">Examples</a></li>
                         <li><a href="#download">Download</a></li>
-                        <li><a href="#">Documentation</a></li>
+                        <li><a href="#doc">Documentation</a></li>
                     </ul>
                 </nav>
                 <button class="mobile-menu-btn">☰</button>
@@ -383,7 +383,7 @@
         <div class="container">
             <h1>RAMR Programming Language</h1>
             <p>A modern, expressive language designed for performance and developer happiness. Write cleaner code with less effort.</p>
-            <a href="https://github.com/RarPlay/ramr" class="download-btn">Download RAMR</a>
+            <a href="#download" class="download-btn">Download RAMR</a>
         </div>'
         
     </section>
@@ -427,63 +427,6 @@
         </div>
     </section>
 
-    <!-- Code Example Section -->
-    <section class="code-example" id="code">
-        <div class="container">
-            <h2 class="section-title">RAMR in Action</h2>
-            <div class="code-container">
-                <div class="code-header">
-                    <div class="code-title">example.rmr</div>
-                    <div class="code-actions">
-                        <div class="code-action"></div>
-                        <div class="code-action"></div>
-                        <div class="code-action"></div>
-                    </div>
-                </div>
-                <div class="code-content">
-                    <pre><span class="code-keyword">import</span> std.io
-
-<span class="code-comment">// Define a simple data structure</span>
-<span class="code-keyword">struct</span> Person {
-    name: String,
-    age: u32,
-    email: Option&lt;String&gt;
-}
-
-<span class="code-comment">// Pattern matching example</span>
-<span class="code-keyword">fn</span> <span class="code-function">greet_person</span>(person: Person) -> String {
-    <span class="code-keyword">match</span> person {
-        Person { name, age: a, email: Some(e) } <span class="code-keyword">if</span> a >= 18 => 
-            <span class="code-keyword">return</span> <span class="code-string">"Hello "</span> + name + <span class="code-string">", your email is "</span> + e,
-        Person { name, age: a, email: None } <span class="code-keyword">if</span> a >= 18 => 
-            <span class="code-keyword">return</span> <span class="code-string">"Welcome "</span> + name + <span class="code-string">" (adult)"</span>,
-        Person { name, .. } => 
-            <span class="code-keyword">return</span> <span class="code-string">"Hi "</span> + name + <span class="code-string">" (minor)"</span>
-    }
-}
-
-<span class="code-comment">// Main function</span>
-<span class="code-keyword">fn</span> <span class="code-function">main</span>() {
-    <span class="code-keyword">let</span> alice = Person {
-        name: <span class="code-string">"Alice"</span>,
-        age: 25,
-        email: Some(<span class="code-string">"alice@example.com"</span>)
-    };
-    
-    <span class="code-keyword">let</span> bob = Person {
-        name: <span class="code-string">"Bob"</span>,
-        age: 16,
-        email: None
-    };
-    
-    io.println(greet_person(alice));  <span class="code-comment">// "Hello Alice, your email is alice@example.com"</span>
-    io.println(greet_person(bob));    <span class="code-comment">// "Hi Bob (minor)"</span>
-}</pre>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Download Section -->
     <section class="hero" id="download">
         <div class="container">
@@ -493,25 +436,7 @@
             <p style="margin-top: 20px; font-size: 0.9rem; color: var(--gray);">Available for Windows, macOS, Linux, and Docker</p>
         </div>
     </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">RAMR</div>
-                <p>The modern programming language for performance and productivity.</p>
-                <div class="footer-links">
-                    <a href="#">Documentation</a>
-                    <a href="#">Tutorials</a>
-                    <a href="#">Community</a>
-                    <a href="#">GitHub</a>
-                    <a href="#">Blog</a>
-                </div>
-                <p class="copyright">© 2023 RAMR Language. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
-
+    
     <script>
         // Simple mobile menu toggle
         document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
