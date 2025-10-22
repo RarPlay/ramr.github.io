@@ -555,8 +555,9 @@ exit
   </div>
 </section>
 
-    
-    <!-- Download Section -->
+ 
+
+<!-- Download Section -->
     <section class="hero" id="download">
         <div class="container">
             <h2>Ready to Get Started?</h2>
@@ -565,23 +566,24 @@ exit
             <p style="margin-top: 20px; font-size: 0.9rem; color: var(--gray);">Available for Windows Only!</p>
         </div>
     </section>
-    
+
+    <!-- ✅ Footer -->
+    <footer>
+      <hr style="border: 1px solid #334155; width: 80%;">
+      <div style="padding: 20px; text-align: center; color: #94a3b8;">
+        <p>Created by <strong style="color:#38bdf8;">RATMIR</strong> — 2025</p>
+        <div style="margin-top: 10px;">
+          <a href="#download" style="color:#38bdf8; margin:0 10px; text-decoration:none;">Download</a> |
+          <a href="#code" style="color:#38bdf8; margin:0 10px; text-decoration:none;">Code</a> |
+          <a href="#doc" style="color:#38bdf8; margin:0 10px; text-decoration:none;">Docs</a> |
+          <a href="#features" style="color:#38bdf8; margin:0 10px; text-decoration:none;">Features</a>
+        </div>
+        <p style="margin-top:15px; font-size: 0.9em;">RAMR — lightweight and fast programming language</p>
+      </div>
+    </footer>
+
+    <!-- ✅ Script (оставляем только JS) -->
     <script>
-        
-<footer>
-  <hr style="border: 1px solid #334155; width: 80%;">
-  <div style="padding: 20px; text-align: center; color: #94a3b8;">
-    <p>Created by <strong style="color:#38bdf8;">RATMIR</strong> — 2025</p>
-    <div style="margin-top: 10px;">
-      <a href="#download" style="color:#38bdf8; margin:0 10px; text-decoration:none;">Download</a> |
-      <a href="#code" style="color:#38bdf8; margin:0 10px; text-decoration:none;">Code</a> |
-      <a href="#doc" style="color:#38bdf8; margin:0 10px; text-decoration:none;">Docs</a> |
-      <a href="#features" style="color:#38bdf8; margin:0 10px; text-decoration:none;">Features</a>
-    </div>
-    <p style="margin-top:15px; font-size: 0.9em;">RAMR — lightweight and fast programming language</p>
-  </div>
-</footer>
-        
         // Simple mobile menu toggle
         document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
             const nav = document.querySelector('nav ul');
@@ -605,25 +607,18 @@ exit
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-                
+
                 const targetId = this.getAttribute('href');
                 if (targetId === '#') return;
-                
+
                 const targetElement = document.querySelector(targetId);
                 if (targetElement) {
                     window.scrollTo({
                         top: targetElement.offsetTop - 80,
                         behavior: 'smooth'
                     });
-                    
-                    // Close mobile menu if open
-                    const nav = document.querySelector('nav ul');
-                    if (window.innerWidth <= 768) {
-                        nav.style.display = 'none';
-                    }
-                }
-            });
-        });
-    </script>
+
+                    // Close mobile 
+    
 </body>
 </html>
